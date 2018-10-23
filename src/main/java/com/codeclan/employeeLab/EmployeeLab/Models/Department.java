@@ -43,6 +43,8 @@ public class Department {
         this.employees = new ArrayList<> ();
     }
 
+    public Department() {
+    }
 
     public String getDepartmentName() {
         return departmentName;

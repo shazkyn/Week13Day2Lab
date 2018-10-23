@@ -27,6 +27,11 @@ public class Employee {
                     name = "employee_id",
                     nullable = false,
                     updatable = false)
+            },
+            inverseJoinColumns = {@JoinColumn(
+                    name = "project_id",
+                    nullable = false,
+                    updatable = false)
             }
     )
     private List<Project> projects;
@@ -40,6 +45,14 @@ public class Employee {
     }
 
     public Employee() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirst_name() {

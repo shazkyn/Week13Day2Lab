@@ -1,6 +1,7 @@
 package com.codeclan.employeeLab.EmployeeLab;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Employee {
     private String first_name;
@@ -15,8 +16,6 @@ public class Employee {
         this.employeeNum = employeeNum;
         this.projects = new ArrayList<> ( );
         this.department = department;
-
-
     }
 
     public String getFirst_name() {

@@ -1,5 +1,7 @@
 package com.codeclan.employeeLab.EmployeeLab.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +13,19 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "First Name")
+
+    @Column(name = "first_name")
     private String first_name;
-    @Column(name = "Last Name")
+
+    @Column(name = "last_name")
     private String last_name;
-    @Column(name = "Employee Number")
+
+    @Column(name = "employee_number")
     private int employeeNum;
-    @Column(name = "Department")
+
+
+    @ManyToOne
+    @JoinColumn(name = "department_id", nullable = false)
     private Department department;
 
     @ManyToMany
@@ -93,6 +101,10 @@ public class Employee {
 
     public void setDepartment(Department department) {
         this.department = department;
+    }
+
+    public void addProject(Project project) {
+        this.projects.add (project);
     }
 }
 

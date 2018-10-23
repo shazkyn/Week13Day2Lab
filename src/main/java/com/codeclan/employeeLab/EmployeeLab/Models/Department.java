@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name =  "Departments")
+@Table(name =  "departments")
 
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "Dept Name")
+    @Column(name = "dept_name")
     private String departmentName;
 
     @JsonIgnore

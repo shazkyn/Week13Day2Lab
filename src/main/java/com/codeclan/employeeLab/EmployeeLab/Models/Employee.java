@@ -1,4 +1,4 @@
-package com.codeclan.employeeLab.EmployeeLab;
+package com.codeclan.employeeLab.EmployeeLab.Models;
 
 import java.util.ArrayList;
 import java.util.List;
